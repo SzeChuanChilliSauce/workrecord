@@ -70,13 +70,16 @@ int main() {
     swapDouble(da, db);
     std::cout << da << " " << db << std::endl;
 
-    // 自动类型推导，必须有参数类型才能推导
+    // 自动类型推导，必须能确定参数类型才能推导
     // swap(a, c); // error
     swap(a, b);
     std::cout << a << " " << b << std::endl;
 
     // 显式指定类型
     swap<int>(a, b);
+    std::cout << a << " " << b << std::endl;
+    // 告诉编译器调用模板函数 
+    swap<>(a,b);
     std::cout << a << " " << b << std::endl;
 
     // 模板必须要指定T才能使用
