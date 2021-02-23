@@ -22,7 +22,7 @@ void swap(T& a,T& b) {
 template<typename T>
 void swap2() {}
 
-// 对char和int数组进行从达到小进行选择排序
+// 对char和int数组从大到小进行选择排序
 template <typename T>
 void sort(T* arr, int len) {
     for (int i = 0; i < len; i++) {
